@@ -1,0 +1,266 @@
+/* mainhome.css */
+:root{
+    --primary-color: #1A76D1;
+    --secondary-color: #F0F0F0;
+    --text-color: #333;
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.swiper-container {
+  width: 100%;
+height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  
+}
+.custom-swiper {
+  width: 100%;
+  height: 100%;
+}
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+.slide-content::before{
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background-image: linear-gradient(
+    to right,
+     rgba(35, 75, 113, 0.91),
+      rgba(0, 0, 0, 0.171)
+    );
+    
+    z-index: 1;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+ 
+}
+
+.slide-content:hover .slide-img {
+  transform: scale(1.05);
+}
+
+.overlay-text {
+  position: absolute;
+  left: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 800px;
+  padding: 20px 25px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.overlay-text h2 {
+  margin: 0 0 6px;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+    color: var(--primary-color);
+    opacity: 0;
+   
+  
+    animation: fadeIn 0.5s ease forwards; ;
+    animation-delay: 1s;
+}
+@keyframes fadeIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.overlay-text h3 {
+  margin: 0 0 10px;
+  font-weight: 500;
+  font-size: 30px;
+  opacity: 0;
+  animation: fadeInText 1s ease forwards;
+    animation-delay: 1s;
+
+}
+@keyframes fadeInText {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.overlay-text p {
+  font-size: 40px;
+  line-height: 1.4;
+  animation: alternate fadeInParagraph 1.5s ease-in-out  forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+@keyframes fadeInParagraph {
+  from {
+    transform: rotatex(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+.button-slide{
+    font-size: 25px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    box-shadow: 0 0px 12px hsla(0, 0%, 0%, 0.411);
+    border-radius: 6px;
+    text-decoration: none;
+    opacity: 0;
+    animation: btt 1s ease forwards;
+    animation-delay: 1s;
+    
+}
+@keyframes btt {
+    from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+} 
+
+
+.button-slide:hover {
+    background-color: #000000;
+   box-shadow: 0 4px 10px 5px rgba(26, 118, 209, 0.4);
+
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Pagination (dots) */
+.swiper-pagination-bullets {
+  bottom: 12px !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6);
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+  display: none;
+}
+
+/* Navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color);
+  width: 42px;
+  height: 42px;  
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent !important;
+  border: none;
+   
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+.swiper-button-prev {
+  left: 15px;
+}
+.swiper-button-next {
+  right: 15px;
+}
+/* Responsive */
+
+
+
+@media (max-width: 1000px) {
+
+  .overlay-text {
+    max-width: 100%;
+    padding: 10px 12px;
+  }
+
+  .overlay-text h2 {
+    font-size: 25px;
+  }
+
+  .overlay-text h3 {
+    font-size: 20px;
+
+  }
+
+  .overlay-text p {
+    font-size: 20px;
+    max-width: 60%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media (max-width: 480px) {
+
+
+  .overlay-text {
+    max-width: 100%;
+    left: 50px;
+    top: 50%
+  }
+
+  .overlay-text h2 {
+    font-size: 18px;
+  }
+
+  .overlay-text h3 {
+    font-size: 17px;
+  }
+
+  .overlay-text p {
+    font-size: 14px;
+  }
+    .button-slide {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 15px;
+    height: 15px;
+  }
+}
+.nav{
+    position: absolute;
+    width: 100px;
+}
