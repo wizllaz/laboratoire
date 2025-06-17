@@ -20,6 +20,7 @@ const slides = [
     description:
       "Nos biologistes qualifiés vous accompagnent et répondent à toutes vos questions médicales.",
       buttonText: "Contactez-nous",
+      link : "#contact", // Lien vers la section de contact
   },
   {
     image: Labo2,
@@ -28,6 +29,7 @@ const slides = [
     description:
       "Nous utilisons des technologies de pointe pour garantir des résultats précis et rapides.",
       buttonText: "Contactez-nous",
+      link : "#contact", // Lien vers la section de contact
   },
   {
     image: Labo3,
@@ -36,6 +38,7 @@ const slides = [
     description:
       "Présentez-vous directement au laboratoire, sans prise de rendez-vous préalable.",
       buttonText: "rendez-vous",
+      link : "#rendezvous", // Lien vers la section de rendez-vous
   },
 ];
 
@@ -63,7 +66,7 @@ export default function SwiperSlider() {
                 <h2>{slide.title}</h2>
                 <h3>{slide.subtitle}</h3>
                 <p>{slide.description}</p>
-                <button className="button-slide" ><link rel="stylesheet" href="#" />{slide.buttonText}</button>
+                <a href={`${slide.link}`} className="button-slide" >{slide.buttonText}</a>
               </div>
             </div>
           </SwiperSlide>

@@ -48,24 +48,26 @@ nav ul {
     transition: transform 0.3s ease;
 }
 
-ul li {
-    margin: 0 15px;
+
+ul li a{
+     margin: 0 15px;
     color: white;
     font-size: 18px;
     cursor: pointer;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-ul li:first-child {
+ul li:first-child a {
     color: var(--primary-color-nav);
     font-weight: 600;
 }
 
-ul li:hover {
+ul li a:hover {
     color: var(--primary-color-nav);
 }
 
-ul button {
+ul .buttonnave {
     background-color: var(--primary-color-nav);
     color: white;
     border: none;
@@ -75,9 +77,10 @@ ul button {
     font-size: 16px;
     transition: all 0.3s ease;
     text-align: center;
+    text-decoration: none;
 }
 
-ul button:hover {
+ul .buttonnave:hover {
     background-color: #155a8a;
     transform: translateX(10px);
 }
@@ -98,7 +101,7 @@ ul button:hover {
         flex-direction: column;
         background-color: white;
         position: absolute;
-        top: 70px;
+        top: 0;
         left: 0;
         width: 60%;
         padding: 20px;
@@ -109,12 +112,15 @@ ul button:hover {
     }
 
     nav ul li {
-        color: black;
+        color: rgb(0, 0, 0);
         margin: 15px 0;
         width: 100%;
         text-align: center;
         padding: 0 0 15px 0;
         border-bottom: #155a8a 1px solid;
+    }
+    nav ul li a {
+        color: black;
     }
 
     nav ul.active {

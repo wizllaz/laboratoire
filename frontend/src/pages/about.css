@@ -103,3 +103,15 @@ align-items: flex-start;
         width: 100%;
     }
 }
+
+.supp-info{
+    margin: 20px ;
+}
+.info-phrase{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "roboto", sans-serif;
+}

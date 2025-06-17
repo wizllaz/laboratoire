@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVial, faFlask } from "@fortawesome/free-solid-svg-icons";
 import { useState } from 'react';
-
-
 import "./navbar.css";
+import { Link } from 'react-router-dom';
+
 export default function Navbar(){
    const  [open , setopen] = useState(false)
 
@@ -22,12 +22,12 @@ console.log(open)
         ☰ 
       </div>
             <ul className = {open? "active" : ""}>
-             <li>Home</li>
-             <li>About US</li>
-             <li>Services</li>
-             <li>Contact</li>
-             <li>Position</li>
-                <button><link rel="stylesheet" href="#" />Rendez-vous</button>
+             <li><a href="#home">Home</a></li>
+             <li><a href="#about">À propos de nous</a></li>
+             <li><a href="#service">Services</a></li>
+             <li><a href="#about">Contact</a></li>
+             <li><a href="#about">Position</a></li>
+                <a rel="stylesheet" href="#rendezvous" className='buttonnave' >Rendez-vous</a>
             </ul>
 
          

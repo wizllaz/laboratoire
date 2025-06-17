@@ -1,0 +1,155 @@
+:root{
+    --primary-color--about: #002B46;
+    --secondary-color: #F0F0F0;
+    --text-color: #7a7a7a;
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+* {
+    box-sizing: border-box;
+}
+
+
+.line-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+.line-container h1{
+    font-size: 30px;
+    color: var(--primary-color--about);
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+.line {
+  position: relative;
+  width: 100px; /* Length of the line */
+  height: 4px;
+  background-color: #1A76D1;
+}
+
+.ball {
+height: 100%;
+width: 0.3cm;
+  background-color: #ffffff;
+  animation: moveBall 1.5s linear infinite alternate;
+  animation-timing-function: ease-in-out;
+
+
+}
+
+@keyframes moveBall {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 90px; /* Slightly less than the line width to keep the ball inside */
+  }
+}
+
+
+
+.card-continer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 20px auto;
+
+}
+.card {
+    background: linear-gradient(to top, #ffffff 50%, #1A76D1 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
+    transition: background-position 0.6s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.card.animatedcard {
+    background-position: top;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    
+    transition: background-position 0.6s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.flaticon{
+    background-color: #1A76D1;
+ position: absolute;
+ top: 200px;
+ padding: 20px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.flaticon.animatedflaticon{
+    background-color: #000000;
+     transform: translate(-50%, -50%) rotate(360deg);
+     transition: transform 0.6s ease, background-color 0.6s ease;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+ display: block;
+    object-fit: cover;
+}
+
+.ser-dis{
+    margin-top: 15px;
+   padding-top: 30px;
+}
+
+.ser-dis h2 {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    transition : color 0.6s ease;
+}
+.card-title.animatedcard-title{
+    color : white ;
+    transition : color 0.6s ease;
+
+}
+.ser-dis p {
+    color: var(--text-color);
+    font-size: 16px;
+    font-family: 'Sora', sans-serif;
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+.card-description.animatedcard-description{
+     color : white ;
+    transition : color 0.6s ease;
+}
+.card-button{
+    background-color: #1A76D1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Sora', sans-serif;
+    transition: background-color 0.6s ease;
+}
+
+.card-button.animatedcard-button{
+    background-color: #000000;
+    transition: background-color 0.6s ease;
+}

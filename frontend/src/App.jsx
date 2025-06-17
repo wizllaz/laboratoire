@@ -1,5 +1,8 @@
 import SwiperSlider from './pages/mainhome.jsx'
 import About from './pages/about.jsx'
+import Service from './pages/service.jsx'
+import Rendezvous from './pages/rendevous.jsx'
+import { Router , Routes , Route } from 'react-router-dom'
 import './App.css'
 
 function App() {
@@ -8,8 +11,23 @@ return(
 
     <>
         
-        <SwiperSlider/>
-        <About/>
+        <Routes>
+            <Route path="/" element={
+                <>
+                 <SwiperSlider/>
+        <section id ="about" >
+            <About/>
+        </section>
+        <section id="service">
+            <Service/>
+        </section>
+        <section id="rendezvous">
+            <Rendezvous/>
+        </section>
+                </>
+            } />
+           
+        </Routes>
         
 </>
 )

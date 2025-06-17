@@ -1,0 +1,117 @@
+:root {
+  --primary-color--about: #002B46;
+  --secondary-color: #1A76D1;
+  --text-color: #7a7a7a;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rebdevous-continer {
+  display: flex;
+  width: 100% ;
+    min-height: 100vh;
+  margin: 50px auto;
+    align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
+    background-color: var(--primary-color--about);
+    padding: 50px
+}
+
+.form-rende {
+  display: flex;
+  flex-direction: column;
+  width:  50%;
+  background-color: white;
+  padding: 50px;
+  height: 500px;
+ 
+}
+
+
+.map{
+ width: 100%;
+    align-self: stretch;
+    height: 500px;
+
+
+}
+.form-rende h1 {
+font-family: "Sora", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+font-style: italic;
+  color: #1A76D1;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+input,
+select {
+  margin-bottom: 25px;
+  padding: 10px;
+  outline: none;           /* Remove default focus outline */
+  border: none;            /* Remove default border */
+  border-bottom: 1px solid #ccc; /* Optional: custom underline */
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-family: "Sora", sans-serif;
+  appearance: none;        /* Remove default styling (important) */
+}
+
+input::placeholder{
+    color: rgb(0, 0, 0);
+    font-family: "Sora", sans-serif;
+    font-size: 15px;
+}
+
+select option {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+/* Optional: remove arrows for select in some browsers */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.label-box{
+    color: white;
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+}
+.button-form{
+    background-color: #1A76D1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.button-form:hover{
+ background-color: #002B46;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+@media (max-width: 1000px) {
+  .form-rende {
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  .mapcontiner{
+
+ width: 100%;
+    height: 300px;
+
+
+  }
+  .map {
+    width: 100%;
+    height: 300px;
+  }
+  
+
+}
