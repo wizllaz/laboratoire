@@ -1,0 +1,105 @@
+.contactcontiner{
+    padding: 20px;
+    background-color: black ; 
+    display: flex;
+    flex-wrap: wrap;
+    gap:  30px;
+
+}
+@media(max-width : 700px){
+    .contactcontiner{
+        flex-direction: column;
+    }
+}
+.logocontact{
+    width: 200px;
+    height: 200px;
+margin: 0 auto;
+transform: translateX(-40px);
+}
+.logocontact img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block ;
+    
+ 
+}
+.section-1 p {
+    color: white;
+    font-size: 18PX;
+    font-family: 'Sora', sans-serif;
+    margin: 0 20px;
+    
+
+}
+.iconlink{
+    color:  #1A76D1;
+    font-size: 40px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    
+}
+.iconlink:hover{
+    color: white;
+}
+.social-links{
+    text-align: center;
+    margin-top: 30px;
+    transform: translateX(-40px);
+}
+.title-quick{
+    color: white;
+    font-size: 24px;
+    font-family: 'Sora', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.quicklinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.quicklinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Sora', sans-serif;
+    transition: color 0.3s ease;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}
+
+.quicklinks li {
+     margin-top: 20px;
+    padding: 0;
+    text-align: start;
+}
+
+.section-1{
+ flex: 1;
+}
+ .contact-info .info{
+    margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+    align-items: center
+    ;
+}
+.title-quick2{
+        color: white;
+    font-size: 24px;
+    font-family: 'Sora', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.icon{
+    color: #1A76D1;
+    font-size: 25px;
+    
+    transition: color 0.3s ease;
+}
